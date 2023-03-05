@@ -1,3 +1,5 @@
+# Inspired from the youtube channel Machine Learnia
+
 import numpy as np
 import matplotlib.pyplot as plt
 import sklearn.metrics as metrics
@@ -46,7 +48,7 @@ def back_propagation(y, params, activations):    # We define the back propagatio
 
     m = y.shape[1]  # We get the number of datas
     L = len(params) // 2  # We get the number of layers
-
+    
     dZ = activations['A' + str(L)] - y  # We calculate the gradient of the loss with respect to the output of the last layer
     grads = {}  # We create a dictionary to store the gradients
 
